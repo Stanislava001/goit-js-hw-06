@@ -20,11 +20,15 @@ galleryEl.style.flexDirection = 'row';
 galleryEl.style.justifyContent = 'space-between';
 galleryEl.style.listStyleType = 'none';
   
-  
-  images.forEach((image) => {
+const imageList = [];
+const insertImg = (images) => {
+   return images.map((image) => {
   galleryEl.insertAdjacentHTML(
     "afterbegin",
     `<li><img src = ${image.url} alt = ${image.alt} width = 200 height = 150></li>`
   );
 });
-
+}
+const elements = insertImg(images);
+imageList.push(...elements);
+ 

@@ -4,11 +4,10 @@ console.log(input.value)
 const spanEl = document.querySelector('#text');
 console.log(spanEl);
 
-input.setAttribute("value", 56);
+spanEl.style.fontSize = "56px";
 input.addEventListener('input', onTextFontChange);
 
 
 function onTextFontChange() {
   spanEl.style.fontSize = input.value + "px";
-    
 }
